@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coqui3D — Magic & Tabletop Accessories</title>
+  <meta name="description" content="Coqui3D — 3D printed Magic: The Gathering and tabletop accessories. Unique deck boxes, dice holders, and novelty pieces." />
+  <style>
+    /* Simple dark theme styles */
+    :root{
+      --bg:#0b0b0d; --panel:#141417; --muted:#bdbdbd; --accent:#00d686;
+      --card:#161618; --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%; margin:0; background:linear-gradient(180deg,#080808,#0b0b0d); color:#eee;}
+    .wrap{max-width:980px; margin:0 auto; padding:36px 20px;}
+    header.top{
+      display:flex; align-items:center; gap:18px; padding:18px; border-radius:12px;
+      background:linear-gradient(180deg,var(--panel),#0f0f10); box-shadow:0 6px 24px rgba(0,0,0,0.6);
+    }
+    .logo { width:64px; height:64px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+      background:var(--glass); border:1px solid rgba(255,255,255,0.04); font-weight:700; font-size:28px;}
+    h1 { margin:0; font-size:28px; letter-spacing:0.5px;}
+    p.lead { margin:6px 0 0; color:var(--muted); }
+
+    /* Hero */
+    .hero {
+      margin-top:28px;
+      display:grid; grid-template-columns:1fr 360px; gap:24px; align-items:stretch;
+    }
+    .hero-card {
+      background:linear-gradient(180deg,#101012,#0f0f10); border-radius:12px; padding:20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+    .hero-card h2 { margin:0 0 8px; color:#fff;}
+    .hero-card p { color:var(--muted); margin:0 0 12px; }
+    .meta { display:flex; gap:10px; color:var(--muted); font-size:14px; margin-top:12px; }
+
+    /* product preview */
+    .preview {
+      background: linear-gradient(180deg,#0e0e10,#0b0b0c); border-radius:12px; padding:12px; text-align:center;
+      display:flex; flex-direction:column; gap:12px; align-items:center; justify-content:center;
+    }
+    .preview img { width:280px; max-width:100%; border-radius:10px; box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+    .muted { color:var(--muted); font-size:14px; }
+
+    /* features */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:26px; }
+    .card { background:var(--card); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.03);}
+    .card h3 { margin:0 0 6px; font-size:16px; color:#fff;}
+    .card p { margin:0; color:var(--muted); font-size:14px; }
+
+    footer { margin-top:36px; color:var(--muted); text-align:center; font-size:13px; }
+    a.etsy { color:var(--accent); text-decoration:none; font-weight:600; }
+    /* responsive */
+    @media (max-width:880px){
+      .hero { grid-template-columns:1fr; }
+      .preview img{ width:220px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="logo">🐸</div>
+      <div>
+        <h1>Coqui3D</h1>
+        <p class="lead">Custom 3D-printed Magic & tabletop accessories — deck boxes, dice holders, and novelty pieces.</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Skull Deck Box — novelty deck storage</h2>
+        <p>Bold, magnetic deck boxes designed for standard and Commander decks. 3D printed in durable PLA and finished for display.</p>
+        <div class="meta">
+          <div>📦 Ships from Houston, TX</div>
+          <div>🧩 Custom options available</div>
+        </div>
+
+        <div class="grid" style="margin-top:18px;">
+          <div class="card">
+            <h3>Capacity</h3>
+            <p>Holds a full 100-card sleeved Commander deck (or standard 60-card decks).</p>
+          </div>
+          <div class="card">
+            <h3>Materials</h3>
+            <p>PLA filament, embedded magnets for closure, and optional painted accents.</p>
+          </div>
+          <div class="card">
+            <h3>Finish</h3>
+            <p>Post-processed for smooth edges and a clean look — ready for photos or game night.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="preview">
+        <!-- Replace placeholder src with your uploaded image path later -->
+        <img src="https://placehold.co/560x420?text=Skull+Deck+Box" alt="Skull Deck Box preview">
+        <div class="muted">Featured: Skull Deck Box</div>
+        <div class="muted">Shop on Etsy: <a class="etsy" href="https://www.etsy.com/shop/Coqui3D" target="_blank" rel="noopener">Coqui3D on Etsy</a></div>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="yr"></span> Coqui3D — handcrafted tabletop accessories • contact: <a href="mailto:coqui3d@gmail.com" style="color:var(--muted); text-decoration:underline">coqui3d@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
